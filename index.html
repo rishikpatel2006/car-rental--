@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7f2" />
+    <meta
+      name="description"
+      content="Find and book the right car for your next trip with Mileway."
+    />
+    <title>Mileway — Find your next drive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Mileway home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M5 22.5 9.2 11h3.5l3.4 7.2 3.4-7.2H23l4 11.5h-4l-2.2-6.7-3.1 6.7h-3.3l-3.1-6.7-2.3 6.7H5Z" fill="currentColor" />
+          </svg>
+        </span>
+        <span>mileway<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#fleet">Explore cars</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+        <a class="nav-link" href="#footer">About us</a>
+      </nav>
+      <div class="header-actions">
+        <button class="text-button" id="sign-in-button" type="button">Sign in</button>
+        <button class="button button-dark header-cta" id="get-started-button" type="button">Get started <span aria-hidden="true">↗</span></button>
+        <button class="menu-button" id="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> A better way to get there</div>
+          <h1 id="hero-title">The open road<br />is <span>calling.</span></h1>
+          <p>Find the right car for wherever life takes you. Easy booking, great cars, and more room for the good stuff.</p>
+          <a class="hero-link" href="#fleet">Explore our cars <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=85"
+            alt="Silver sports car on a scenic mountain road"
+          />
+          <div class="hero-image-shade"></div>
+          <div class="hero-caption">
+            <span class="caption-label">YOUR NEXT CHAPTER</span>
+            <span class="caption-title">Starts right here.</span>
+          </div>
+          <div class="hero-stamp"><span>GO<br />YOUR<br />OWN WAY</span><span class="stamp-arrow" aria-hidden="true">↗</span></div>
+          <div class="hero-index"><span>01</span><span class="index-rule"></span><span>03</span></div>
+        </div>
+        <div class="hero-note"><span class="note-spark" aria-hidden="true">✳</span> A little more freedom<br />looks good on you.</div>
+      </section>
+
+      <section class="booking-section" aria-label="Search for a rental car">
+        <form class="booking-bar" id="search-form">
+          <label class="booking-field location-field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M19 10.1c0 5-7 11-7 11s-7-6-7-11a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <span class="field-copy"><span class="field-label">Pick-up location</span>
+              <select id="location" aria-label="Pick-up location">
+                <option value="any">Choose a location</option>
+                <option value="New York">New York, NY</option>
+                <option value="Los Angeles">Los Angeles, CA</option>
+                <option value="Chicago">Chicago, IL</option>
+                <option value="Miami">Miami, FL</option>
+                <option value="San Francisco">San Francisco, CA</option>
+              </select>
+            </span>
+          </label>
+          <label class="booking-field date-field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 3v5m8-5v5M4 10h16" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <span class="field-copy"><span class="field-label">Pick-up date</span><input id="pickup-date" type="date" aria-label="Pick-up date" /></span>
+          </label>
+          <label class="booking-field date-field">
+            <span class="field-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 3v5m8-5v5M4 10h16" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <span class="field-copy"><span class="field-label">Drop-off date</span><input id="dropoff-date" type="date" aria-label="Drop-off date" /></span>
+          </label>
+          <button class="button button-accent search-button" type="submit"><span>Find a car</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="booking-meta"><span><span class="availability-dot"></span> Flexible pick-up &amp; drop-off</span><span>Free cancellation on most bookings</span></div>
+      </section>
+
+      <section class="fleet-section" id="fleet" aria-labelledby="fleet-heading">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> A ride for every road</div>
+            <h2 id="fleet-heading">Find your <span>kind of car.</span></h2>
+          </div>
+          <a class="all-cars-link" href="#car-grid">View all cars <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="fleet-toolbar">
+          <div class="category-tabs" role="group" aria-label="Filter cars by type">
+            <button class="category-tab active" type="button" data-category="All" aria-pressed="true">All cars <span class="tab-count">06</span></button>
+            <button class="category-tab" type="button" data-category="SUV" aria-pressed="false">SUV</button>
+            <button class="category-tab" type="button" data-category="Luxury" aria-pressed="false">Luxury</button>
+            <button class="category-tab" type="button" data-category="Electric" aria-pressed="false">Electric</button>
+            <button class="category-tab" type="button" data-category="Compact" aria-pressed="false">Compact</button>
+          </div>
+          <button class="sort-button" id="sort-button" type="button" aria-label="Sort cars by price">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M7 12h10m-7 5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span>Sort: <strong>Recommended</strong></span>
+            <span class="sort-chevron" aria-hidden="true">⌄</span>
+          </button>
+        </div>
+        <div class="results-message" id="results-message" aria-live="polite"></div>
+        <div class="car-grid" id="car-grid"></div>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div class="how-intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> Simple by design</div>
+          <h2>Good trips<br />start <span>easy.</span></h2>
+          <p>Less time figuring it out, more time out there. Your next ride is just a few clicks away.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">01</span>
+            <span class="step-icon" aria-hidden="true">⌕</span>
+            <h3>Find your ride</h3>
+            <p>Choose your dates and find a car that fits your plans—and your style.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">02</span>
+            <span class="step-icon" aria-hidden="true">↗</span>
+            <h3>Book in a breeze</h3>
+            <p>Reserve online in minutes. Clear prices, no surprises. That's our promise.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">03</span>
+            <span class="step-icon" aria-hidden="true">✳</span>
+            <h3>Make it a journey</h3>
+            <p>Pick up your keys, hit the road, and enjoy the ride. It's all yours.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing-banner">
+        <div class="closing-copy">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> Wherever you have in mind</div>
+          <h2>Let's get<br />you <span>moving.</span></h2>
+          <a class="button button-light" href="#fleet">Find your car <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="closing-image">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85" alt="Sunlight on an open road through a forest" loading="lazy" />
+          <span class="closing-image-label">TAKE THE<br />LONG WAY.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <a class="brand footer-brand" href="#" aria-label="Mileway home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 22.5 9.2 11h3.5l3.4 7.2 3.4-7.2H23l4 11.5h-4l-2.2-6.7-3.1 6.7h-3.3l-3.1-6.7-2.3 6.7H5Z" fill="currentColor" /></svg></span>
+        <span>mileway<span class="brand-period">.</span></span>
+      </a>
+      <p>More miles. Better memories.</p>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> Mileway, Inc.</span><span>Made for the way you go.</span><a href="#hero-title">Back to top ↑</a></div>
+    </footer>
+
+    <dialog class="booking-dialog" id="booking-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+      <div class="dialog-eyebrow"><span class="eyebrow-line"></span> Your next adventure</div>
+      <h2 id="dialog-title">Make it <span>official.</span></h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <form class="reservation-form" id="reservation-form">
+        <label>Full name<input name="name" autocomplete="name" placeholder="Jamie Parker" required /></label>
+        <label>Email address<input name="email" type="email" autocomplete="email" placeholder="jamie@example.com" required /></label>
+        <div class="reservation-summary" id="reservation-summary"></div>
+        <button class="button button-accent dialog-submit" type="submit">Request this car <span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="dialog-footnote">No payment is collected in this demo.</p>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
